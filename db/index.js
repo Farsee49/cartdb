@@ -4,7 +4,7 @@ const connectionString = 'postgres://localhost:5432/post3'
 
 const client =  new Client({connectionString});
 
-const createUser = async (user)  {
+const createUser = async (user) =>  {
     const {name, password, email} = user
     try{
         const {rows: [user]} = await client.query(`

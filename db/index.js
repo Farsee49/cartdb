@@ -21,7 +21,7 @@ const createUser = async (user) =>  {
     }
 };
 
-// LEFT JOIN RIGHT JOIN AND INNER JOIN
+//******CHECKOUT******* */ uses join**************
 const getUsersAndCart = async () => {
   try{
     const { rows } = await client.query(`

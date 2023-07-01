@@ -27,7 +27,7 @@ const getUsersAndCart = async () => {
     const { rows } = await client.query(`
     SELECT users.id AS "CartOwner" , cart.id AS "Cart", cart.quantity AS " CartQuantity"
     FROM cart
-RIGHT JOIN users ON cart."cartUserId" = users.Id;
+    JOIN users ON cart."cartUserId" = users.Id;
     
     `);
   

@@ -4,7 +4,7 @@ const connectionString = 'postgres://localhost:5432/post3'
 
 const client =  new Client({connectionString});
 
-async function createUser  (user)  {
+const createUser = async (user)  {
     const {name, password, email} = user
     try{
         const {rows: [user]} = await client.query(`
@@ -73,7 +73,7 @@ const createProducts = async (product) => {
 
 };
 
-async function addItemToCart( quantity, total, cartUserId,productsId) {
+const addItemToCart = async ( quantity, total, cartUserId,productsId) =>{
     try {
   await client.query(`
         INSERT INTO cart (quantity, total, "cartUserId", "productsId")
